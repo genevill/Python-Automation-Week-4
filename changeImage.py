@@ -28,7 +28,7 @@ for picture in pictures:
     if picture != save:
         try:
             with Image.open(picture) as im:
-                im.convert("RGB").resize((600, 400)).save(path + "/{}".format(save))
+                im.convert("RGB").resize((600, 400)).save(save)
                 print("Converting", picture)
         except OSError:
             print("cannot convert", picture)
